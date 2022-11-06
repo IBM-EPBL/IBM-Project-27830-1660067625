@@ -1,0 +1,209 @@
+<html>
+	<head>
+	<title>Wind Energy Prediction</title>
+	<style>
+		.header {	
+			top:0px;	
+			margin:0px;
+			left: 0px;
+			right: 0px;
+			position: fixed;
+			background: #6c493a;
+			color: white;
+			overflow: hidden;
+			padding-bottom: 30px;
+			font-size: 2.25vw;
+			width: 100%;
+			padding-left:0px;
+			text-align: center;
+			padding-top:20px;
+		}
+		.second{
+			top:80px;
+			bottom:0px;
+			margin:0px;
+			left: 0px;
+			right: 0px;
+			position: fixed;
+			padding: 0px;
+			width: 100%;
+			background-color:#F2D19A;
+			font-family:Georgia, serif;
+			color:black;
+			font-size:20px;
+		}
+		.inside{
+			top:80px;
+			bottom:0px;
+			margin:0px;
+			left: 55%;
+			right: 0%;
+			position: fixed;
+			padding-left: 40px;
+			padding-top:8%;
+			padding-right:40px;
+			background-color:#F2D19A;
+			font-family:Georgia, serif;
+			color:black;
+			font-size:20px;
+			text-align:justify;
+			
+		}
+		.myButton{
+			  border: none;
+			  text-align: center;
+			  cursor: pointer;
+			  text-transform: uppercase;
+			  outline: none;
+			  overflow: hidden;
+			  color: #fff;
+			  font-weight: 700;
+			  font-size: 12px;
+			  background-color: #6c493a;
+			  padding: 10px 15px;
+			  margin: 0 auto;
+			  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+			  margin-left:17%;
+		}
+	input { 
+	width:50%; 
+	margin-bottom: 10px; 
+	background: #FFFDD0;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #6c493a;
+	text-shadow: white;
+	border: #6c493a;
+	border-radius: 4px;
+	box-shadow: white;
+}
+::placeholder {
+  color: black;
+  opacity: 1; 
+}
+
+.left{
+		top:80px;
+			bottom:0px;
+			margin:0px;
+			left: 0%;
+			right: 50%;
+			position: fixed;
+			padding-left: 10%;
+			padding-top:5%;
+			padding-right:40px;
+			background-color:#F2D19A;
+			font-family:Georgia, serif;
+			color:black;
+			font-size:20px;
+			align:center;
+			
+}
+	select { 
+	width:50%; 
+	margin-bottom: 10px; 
+	background: white;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #6c493a;
+	text-shadow: white;
+	border: #6c493a;
+	border-radius: 40px;
+	box-shadow: white;
+}
+
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+	</style>
+	</head>
+	<body>
+		<div class="header">Wind Turbine Energy Prediction Based on Weather Conditions</div>
+		<div class="second">
+		<div class="left">
+		Give your city name to know the weather conditions..<br><br>
+		<div style="margin-left:20%">
+		<form action="{{ url_for('windapi')}}"method="post">
+				<select name="city" required>
+					<option value ="Agartala"	>	Agartala	</option>
+					<option value ="Aizawl"	>	Aizawl	</option>
+					<option value ="Amravati"	>	Amravati	</option>
+					<option value ="Bengaluru"	>	Bengaluru	</option>
+					<option value ="Bhopal"	>	Bhopal	</option>
+					<option value ="Bhubaneswar"	>	Bhubaneswar	</option>
+					<option value ="Chandigarh"	>	Chandigarh	</option>
+					<option value ="Chennai"	>	Chennai	</option>
+					<option value ="Daman"	>	Daman	</option>
+					<option value ="Dehradun"	>	Dehradun	</option>
+					<option value ="Delhi"	>	Delhi	</option>
+					<option value ="Dispur"	>	Dispur	</option>
+					<option value ="Gandhinagar"	>	Gandhinagar	</option>
+					<option value ="Gangtok"	>	Gangtok	</option>
+					<option value ="Hyderabad"	>	Hyderabad	</option>
+					<option value ="Imphal"	>	Imphal	</option>
+					<option value ="Itanagar"	>	Itanagar	</option>
+					<option value ="Jaipur"	>	Jaipur	</option>
+					<option value ="Kavaratti"	>	Kavaratti	</option>
+					<option value ="Kohima"	>	Kohima	</option>
+					<option value ="Kolkata"	>	Kolkata	</option>
+					<option value ="Lucknow"	>	Lucknow	</option>
+					<option value ="Mumbai"	>	Mumbai	</option>
+					<option value ="Panaji"	>	Panaji	</option>
+					<option value ="Patna"	>	Patna	</option>
+					<option value ="Pondicherry"	>	Pondicherry	</option>
+					<option value ="Port Blair"	>	Port Blair	</option>
+					<option value ="Raipur"	>	Raipur	</option>
+					<option value ="Ranchi"	>	Ranchi	</option>
+					<option value ="Shillong"	>	Shillong	</option>
+					<option value ="Shimla"	>	Shimla	</option>
+					<option value ="Silvassa"	>	Silvassa	</option>
+					<option value ="Srinagar"	>	Srinagar	</option>
+					<option value ="Thiruvananthapuram"	>	Thiruvananthapuram	</option>
+
+				</select><br><br>
+				<div style="margin-left:-22%"><button type="submit" class="myButton" >Check the Weather Conditions</button></div>
+			
+			</form>
+			</div>
+			<div>
+			<table style="margin-left:2%; text-align:center; border-spacing:20px;">
+				<tr>
+					<td colspan="2" style="font-size:25px;">The weather conditions of the city are</td>
+				</tr>
+				<tr>
+					<td>Temperature</td><td>{{temp}}</td>
+				</tr>
+				<tr>
+					<td>Humidity</td><td>{{humid}}</td>
+				</tr>
+				<tr>
+					<td>Pressure</td><td>{{pressure}}</td>
+				</tr>
+				<tr>
+					<td>Wind Speed</td><td>{{speed}}</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+			<div class="inside">
+			<div style="font-size:23px;font-weight:bold;">Predict the Wind Energy!!</div>
+			<br><br>
+			<form action="{{ url_for('y_predict')}}"method="post">
+				<input type="text" name="theo" placeholder="Theoretical Power in KWh" required="required" />
+				<input type="text" name="wind" placeholder="Wind Speed in m/s" required="required" /><br><br>
+				<button type="submit" class="myButton" >Predict</button>
+			
+			</form>
+
+		   <br>
+		   <br>
+		   {{ prediction_text }}
+			
+		</div>
+		
+		
+		</div>
+	</body>
+</html>
