@@ -1,5 +1,5 @@
 # IBM-Project-27830-1660067625
-Predicting the energy output of wind turbine based on weather condition.
+PROJECT TITLE : PREDICTING THE ENERGY OUTPUT OF WIND TURBINE BASED ON WEATHER CONDITION
 This project has been done under the IBM Nalaiya Thiran initiative. It is a wind energy output predictor.
 
 Team ID : PNT2022TMID28461
@@ -14,6 +14,6 @@ Team member : RAJASHREE G D
 
 Team member : SNEHA V
 
-Team member : MONISHA K
+Team member : MONISHA N
 
 
