@@ -9,7 +9,7 @@ Team Size : 5
 
 Team Leader : TIMOTHY ERIC DARE J
 
-Team member : VIJAYA RAJU R, RAJASHREE GD, SNEHA V, MONISHA N.
+Team member : VIJAYA RAJU R, RAJASHREE G D, SNEHA V, MONISHA N.
 
 Batch : B1-1M3E	
 
